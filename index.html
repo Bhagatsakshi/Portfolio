@@ -5,294 +5,333 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sakshi's Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        :root {
+            --primary-color: #4a4e69;
+            --secondary-color: #9a8c98;
+            --accent-color: #c9ada7;
+            --background-color: #22223b;
+            --text-color: #f2e9e4;
         }
 
         body {
-            background-color: rgb(0, 0, 33);
-            color: white;
-            font-family: "Poppins", sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
 
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 80px;
-            background-color: rgb(18, 18, 62);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        nav ul li a {
+        a {
             text-decoration: none;
-            color: white;
         }
 
-        nav ul li a:hover {
-            color: rgb(153, 153, 226);
-            font-size: 1.01rem;
-        }
-
-        .left {
-            text-align: start;
-            font-size: 1.5rem;
-            margin-left: -350px;
-        }
-
-        .firstSection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 130px 0;
-        }
-
-        .firstSection>div {
-            width: 30%;
-        }
-
-        .leftSection {
-            font-size: 2.5rem;
-        }
-
-        .leftSection .buttons {
-            padding: 50px 0;
-        }
-
-        .leftSection .btn a {
-            text-decoration: none;
-            padding: 12px;
-            background: rgb(76, 1, 147);
-            color: white;
-            border: 2px solid white;
-            border-radius: 8px;
-            font-size: 15px;
-            cursor: pointer;
-        }
-
-        .rightSection .background {
-            width: 80%;
-        }
-
-        .purple {
-            color: rgb(170, 107, 228);
-        }
-
-        #element {
-            color: rgb(170, 107, 228);
-        }
-
-        .secondSection {
-            max-width: 80vw;
-            margin: auto;
-            height: 80vh;
-        }
-
-        .secondSection h1 {
-            font-size: 1.5rem;
-        }
-
-        .secondSection .box {
-            background-color: white;
-            width: 76vw;
-            height: 2px;
-            margin: 56px 0;
-            display: flex;
-        }
-
-        .secondSection .vertical {
-            height: 93px;
-            width: 1px;
-            background-color: white;
-            margin: 0 150px;
-        }
-
-        .text-gray {
-            color: grey;
-        }
-
-        .image-top {
-            width: 37px;
-            position: relative;
-            top: -37px;
-            left: -11px;
-        }
-
-        .vertical-title {
-            position: relative;
-            top: 75px;
-            width: 150px;
-        }
-
-        .vertical-desc {
-            position: relative;
-            top: 86px;
-            color: grey;
-            width: 150px;
-            font-size: 9px;
-        }
-
+        .navbar,
         footer {
-            background-color: #0e0e1a;
+            background-color: var(--primary-color);
         }
 
-        .footer {
-            display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
+        .navbar-brand,
+        .nav-link,
+        footer {
+            color: var(--text-color) !important;
         }
 
-        .footer ul {
-            list-style: none;
+        .nav-link:hover {
+            color: var(--accent-color) !important;
         }
 
-        .footer>div {
-            width: 223px;
+        .btn-custom {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
         }
 
-        footer .footer-rights {
-            text-align: center;
-            color: grey;
-            padding: 12px 0;
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            color: var(--text-color);
         }
-        .image-logo{
-            width: 45px;
-            position: relative;
-            left: 21px;
-            margin-left:-60px;
+
+        .hero-image img {
+            border-radius: 50%;
+            max-width: 100%;
+            box-shadow: 0 0 20px rgba(201, 173, 167, 0.3);
+        }
+
+        .skill {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 0.2rem 0.4rem;
+        }
+
+        .project {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info h3 {
+            color: var(--accent-color);
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <img class="image-logo" src="photo3.png" alt="">
-            <div class="left">Sakshi's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#blogs">Blogs</a></li>
-                    <li><a href="#contact">Contact</a></li>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sakshi's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hi, My name is
-                <span class="purple">Sakshi</span>
-                <div>and I am a passionate</div>
-                <span id="element"></span>
-                <div class="butttons">
-                    <button class="btn"><a
-                            href="https://www.canva.com/design/DAGDVTCSKaE/Mj8hKaHglv2fcuoSgmZR6w/view?utm_content=DAGDVTCSKaE&utm_campaign=designshare&utm_medium=link&utm_source=editor">View
-                            Resume</a></button>
-                    <button class="btn"><a href="https://github.com/Bhagatsakshi">Visit Github</a></button>
-                </div>
-            </div>
-            <div class="rightSection">
-                <img class="background" src="bg1.png" alt="Photo">
-            </div>
-        </section>
-
-        <section class="secondSection">
-            <span class="text-gray">What I have done so far</span>
-            <h1>Projects & Work Experience</h1>
-            <div class="box">
-                <div class="vertical">
-                    <img class="image-top" src="ewaste2.png" alt="developer photo">
-                    <div class="vertical-title">
-                        E-WASTE LOCATOR (Project)
-                    </div>
-                    <div class="vertical-desc">
-                        Developed a web application called E-Waste Locator to facilitate responsible
-                        e-waste disposal. The website allows users to submit information about their electronic waste
-                        through a Google Form, including details about the type of waste and their location..
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="codsoft1.png" alt="developer photo">
-                    <div class="vertical-title">
-                        C++ Intern-CodSoft(Jan-Mar 2024)
-                    </div>
-                    <div class="vertical-desc">
-                        Implemented object-oriented programming concepts in C++ to design the given tasks
-                        & Gained experience in debugging and troubleshooting C++ code, ensuring efficient program
-                        operation,It is a just like practice test for beginners who want to implement C++ concepts
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="dev.png" alt="developer photo">
-                    <div class="vertical-title">
-                        Open Source Contributor-GSSOC(May-July 2024)
-                    </div>
-                    <div class="vertical-desc">
-                        This program introduces newcomers to open source development by providing opportunities to work
-                        on real-world projects.
-                        During GSSoC, I'll be contributing to a project in Web Development Area.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="zscaler.png" alt="developer photo">
-                    <div class="vertical-title">
-                        Cloud Security Intern-ZScaler Academy(Jan-Mar 2024)
-                    </div>
-                    <div class="vertical-desc">
-                        Learned and applied cloud security concepts through online modules and interactive labs.
-                        & Gained experience in using cloud security tools for vulnerability assessment and penetration
-                        testing. This internship is provided by AICTE EDU-SKILLS in collaboration with ZScaler Academy
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="footer-first">
-                <h3>Sakshi's Developer Portfolio</h3>
-            </div>
-            <nav>
-                <div class="nav-links-container">
-                    <ul class="nav-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#blogs">Blogs</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
         </div>
-        <div class="footer-rights">
-            Copyright © sakshisportfolio.com | All rights reserved
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <h1 class="mb-3" style="color: var(--accent-color)">Welcome to My Portfolio</h1>
+                    <p>Hi, I'm Sakshi, a passionate <span id="element"></span></p>
+                    <div class="mt-3">
+                        <a href="https://drive.google.com/file/d/1Xf9ZKLnliNaqoaq523WkEPr-0oftl0_O/view?usp=sharing"
+                            target="_blank" class="btn btn-custom me-2 mb-2">View Resume</a>
+                        <a href="https://github.com/Bhagatsakshi" target="_blank" class="btn btn-custom mb-2">Visit
+                            Github</a>
+                    </div>
+                </div>
+                <div class="col-md-6 hero-image text-center mt-4 mt-md-0">
+                    <img src="./myphoto.jpg" alt="Sakshi's photo"
+                        style="width: 250px; height: 250px; object-fit: cover;">
+                </div>
+            </div>
         </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 style="color: var(--accent-color)" class="mb-4">About Me</h2>
+            <p>I'm a dedicated developer with a passion for creating efficient and elegant solutions. My journey in tech
+                has equipped me with a diverse skill set and a problem-solving mindset. I'm constantly learning and
+                exploring new technologies to stay at the forefront of the rapidly evolving tech landscape.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5" style="background-color: #22223b;">
+        <div class="container">
+            <h2 class="mb-4" style="color: #c9ada7;">Education</h2>
+            <div class="row g-4 text-light justify-content-center">
+
+                <div class="col-md-4">
+                    <div class="card h-100 p-3" style="background-color: #4a4e69; color: #f2e9e4;">
+                        <h5 class="card-title">JSPM’S RAJARSHI SHAHU COLLEGE OF ENGINEERING, Pune</h5>
+                        <p>B.Tech (IT)</p>
+                        <p>CGPA: 9.43</p>
+                        <p>2022–2026</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 p-3" style="background-color: #4a4e69; color: #f2e9e4;">
+                        <h5 class="card-title">SHRI SHIV CHHATRAPATI COLLEGE, Junnar</h5>
+                        <p>Class 12, HSC</p>
+                        <p>68.7%</p>
+                        <p>2021–2022</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 p-3" style="background-color: #4a4e69; color: #f2e9e4;">
+                        <h5 class="card-title">SHANKAR RAO BUTTE PATIL VIDYALAYA, Junnar</h5>
+                        <p>Class 10, SSC</p>
+                        <p>91.8%</p>
+                        <p>2019–2020</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="technologies" class="py-5">
+        <div class="container">
+            <h2 style="color: var(--accent-color)" class="mb-4">Technologies</h2>
+
+            <!-- Tech Skills -->
+            <p style="color: var(--accent-color)" class="mb-2">Tech Skills</p>
+            <div class="mb-3">
+                <span class="skill">JAVA</span>
+                <span class="skill">MongoDB</span>
+                <span class="skill">SQL</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+            </div>
+
+            <!-- Tools -->
+            <p style="color: var(--accent-color)" class="mb-2">Tools</p>
+            <div>
+                <span class="skill">GitHub</span>
+                <span class="skill">Postman</span>
+                <span class="skill">IntelliJ IDEA</span>
+                <span class="skill">Figma</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5" style="background-color: #22223b;">
+        <div class="container">
+            <h2 class="mb-4" style="color: #c9ada7;">Projects</h2>
+            <div class="row g-4 justify-content-center">
+
+                <!-- E-WASTE LOCATOR -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0" style="background-color: #4a4e69; color: #f2e9e4;">
+                        <div class="card-body">
+                            <h5 class="card-title">E-WASTE Facility Locator</h5>
+                            <p class="card-text">Locate e-waste facilities & submit details about electronic waste via
+                                Google Form.</p>
+                            <p class="mb-1"><strong>Technologies used:</strong> HTML, CSS, JS, Google Forms API</p>
+                            <a href="https://bhagatsakshi.github.io/E-WASTE-FACILITY-LOCATOR/" target="_blank"
+                                class="btn btn-sm btn-outline-warning mt-2">Live Demo</a>
+                            <a href="https://github.com/Bhagatsakshi/E-WASTE-FACILITY-LOCATOR/" target="_blank"
+                                class="btn btn-sm btn-outline-light mt-2">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JAVA QUIZ GAME -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0" style="background-color: #4a4e69; color: #f2e9e4;">
+                        <div class="card-body">
+                            <h5 class="card-title">Java Quiz Game</h5>
+                            <p class="card-text">CLI quiz game to create, take, view, and manage quizzes directly from
+                                terminal.</p>
+                            <p class="mb-1"><strong>Technologies used:</strong> Java, IntelliJ IDEA, CLI</p>
+                            <a href="https://github.com/Bhagatsakshi/Quiz-Game-Using-Java" target="_blank"
+                                class="btn btn-sm btn-outline-light mt-2">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI-POWERED PLANT DIAGNOSTIC TOOL -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0" style="background-color: #4a4e69; color: #f2e9e4;">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Plant Diagnostic Tool</h5>
+                            <p class="card-text">ML-based web app to detect plant diseases from leaf images and provide
+                                recommended solutions.</p>
+                            <p class="mb-1"><strong>Technologies used:</strong> React, Node.js, Express.js, MongoDB,
+                                TensorFlow</p>
+                            <a href="https://github.com/Bhagatsakshi/AI-powered-plant-diagnostic-website"
+                                target="_blank" class="btn btn-sm btn-outline-light mt-2">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIMON GAME -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0" style="background-color: #4a4e69; color: #f2e9e4;">
+                        <div class="card-body">
+                            <h5 class="card-title">Simon Game</h5>
+                            <p class="card-text">Browser-based Simon game with color sequence memory challenge.</p>
+                            <p class="mb-1"><strong>Technologies used:</strong> HTML, CSS, JavaScript</p>
+                            <a href="https://bhagatsakshi.github.io/Simon-Game/" target="_blank"
+                                class="btn btn-sm btn-outline-warning mt-2">Live Demo</a>
+                            <a href="https://github.com/Bhagatsakshi/Simon-Game" target="_blank"
+                                class="btn btn-sm btn-outline-light mt-2">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIMPLE API PROJECTS -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0" style="background-color: #4a4e69; color: #f2e9e4;">
+                        <div class="card-body">
+                            <h5 class="card-title">Simple API Projects</h5>
+                            <p class="card-text">Collection of small projects demonstrating API usage and integration in
+                                web applications.</p>
+                            <p class="mb-1"><strong>Technologies used:</strong> Node.js, Express, REST APIs</p>
+                            <a href="https://github.com/Bhagatsakshi/Simple_API_Projects" target="_blank"
+                                class="btn btn-sm btn-outline-light mt-2">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2 style="color: var(--accent-color)" class="mb-4">Contact Me</h2>
+            <p>Feel free to reach out to me for any inquiries or collaboration opportunities.</p>
+            <div class="mt-3">
+                <a href="https://www.linkedin.com/in/sakshi-bhagat7620" target="_blank"
+                    class="btn btn-custom me-2 mb-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Bhagatsakshi" target="_blank" class="btn btn-custom me-2 mb-2"><i
+                        class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:bhagatsakshi026@gmail.com" class="btn btn-custom mb-2"><i class="fas fa-envelope"></i>
+                    Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3 mt-4 text-center">
+        <p>&copy; 2025 Sakshi's Portfolio. All rights reserved.</p>
     </footer>
+
+    <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ['Web Developer', 'C++  Programmer', 'Video Editor'],
+            strings: [
+                'JAVA Programmer',
+                'Frontend Developer',
+                'SQL Developer'
+            ],
             typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
         });
     </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
